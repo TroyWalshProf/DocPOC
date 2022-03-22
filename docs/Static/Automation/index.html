@@ -81,6 +81,12 @@
                 $("#loading-div-background").hide();
                 $("#loading-div").hide();
 
+                if (Math.floor(Math.random() * 10) > 3) {
+                    document.querySelector("#ErrorPageLink A").setAttribute("href", "bad");
+                }
+                else {
+                    document.querySelector("#ErrorPageLink A").setAttribute("href", "./NotError.html");
+                }
             });
 
             $(document).ready(function () {
@@ -122,8 +128,6 @@
                 });
             };
 
-
-
             $(function () {
                 $("#slider").slider({
                     min: 1,
@@ -135,7 +139,6 @@
                 });
                 $("#sliderNumber").val($("#slider").slider("value"));
             });
-
         </script>
 
         <style type="text/css">
@@ -226,9 +229,8 @@
 
         <h2>Elements to be automated</h2>
         <ul style="list-style-type:none;padding:0px;margin:0px;">
-            <li id="ErrorPageLink"><a href="https://magenicautomation.azurewebsites.net/Automation/ErrorPage">500 Error page</a></li>
-            <li id="AsyncPageLink"><a href="https://magenicautomation.azurewebsites.net/Automation/AsyncPage">Async page</a></li>
-            <li id="SwaggerPageLink"><a href="https://magenicautomation.azurewebsites.net/Swagger">Swagger API</a></li>
+            <li id="ErrorPageLink"><a href="./NotError.html">500 Error page</a></li>
+            <li id="AsyncPageLink"><a href="./Async.html">Async page</a></li>
         </ul>
 
         <div id="ItemsToAutomate">
